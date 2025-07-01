@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-end mb-3">
+        <a href="{% url 'edit' title %}" class="btn btn-secondary">Edit</a>
+    </div>
+    <div>
+        {{ content|safe }}
+    </div>
+{% endblock %}
